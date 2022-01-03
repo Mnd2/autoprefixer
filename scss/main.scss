@@ -1,0 +1,113 @@
+@mixin bg-style {
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+@mixin before-style {
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    opacity: 0.9;
+}
+main {
+    display: flex;
+    flex-wrap: wrap;
+}
+article {
+    display: flex;
+    align-items: center;
+    width: 50%;
+    height: 250px;
+    background: pink;
+    color: white;
+}
+article .content {
+    width: 55%;
+    margin: 0 auto;
+    z-index: 1;
+}
+article .content h2 {
+    padding-bottom: 15px;
+    border-bottom: 3px solid white;
+
+}
+article .content p {
+    padding-top: 15px;
+}
+.article-1 {
+    background: url("../images/pic01.jpg");
+    @include bg-style;
+    width: 35%;
+}
+.article-1::before {
+    @include before-style;
+    background: skyblue;
+}
+.article-2 {
+    background: url("../images/pic02.jpg");
+    @include bg-style;
+    width: 65%;
+}
+.article-2::before {
+    @include before-style;
+    background: rgb(127, 119, 180);
+}
+.article-3 {
+    background: url("../images/pic03.jpg");
+    @include bg-style;
+    width: 65%;
+}
+.article-3::before {
+    @include before-style;
+    background: rgb(144, 159, 212);
+}
+.article-4 {
+    background: url("../images/pic04.jpg");
+    @include bg-style;
+    width: 35%;
+}
+.article-4::before {
+    @include before-style;
+    background: rgb(217, 180, 149);
+}
+.article-5 {
+    background: url("../images/pic05.jpg");
+    @include bg-style;
+    width: 35%;
+}
+.article-5::before {
+    @include before-style;
+    background: rgb(154, 171, 219);
+}
+.article-6 {
+    background: url("../images/pic06.jpg");
+    @include bg-style;
+    width: 65%;
+}
+.article-6::before {
+    @include before-style;
+    background: rgb(139, 192, 197);
+}
+
+.article-1:hover::before,
+.article-2:hover::before,
+.article-3:hover::before,
+.article-4:hover::before,
+.article-5:hover::before,
+.article-6:hover::before {
+    cursor: pointer;
+    background: none;
+}
+@media (max-width: 1000px) {
+    article {
+        width: 50% !important;
+    }
+}
+@media (max-width: 600px) {
+    article {
+        width: 100% !important;
+    }
+}

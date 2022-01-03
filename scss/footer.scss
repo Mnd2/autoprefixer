@@ -1,0 +1,39 @@
+footer {
+    display: flex;
+    align-items: center;
+    height: 150px;
+    background: #232943;
+    color: white;
+}
+footer .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100px;
+    width: 80%;
+    margin: 0 auto;
+    color: white;
+    }
+    
+    footer .social {
+    display: flex;
+    justify-content: space-between;
+    width: 230px;
+    }
+    
+    footer .social svg {
+    width: 30px;
+    height: 30px;
+    background: white;
+    color: black;
+    background-size: contain;
+    padding: 6px;
+    border-radius: 100%;
+    transition: 0.3s;
+
+    &:hover {
+        border: 1px solid white;
+        background: none;
+        color: white;
+    }
+    }
